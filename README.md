@@ -11,6 +11,6 @@ create table member(
 	email varchar(200) not null,
 	birth_date datetime,
 	join_date datetime,
-	update_ddate datetime
+	update_date datetime
 );
 

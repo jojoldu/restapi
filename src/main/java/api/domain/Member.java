@@ -2,10 +2,13 @@ package api.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Member {
@@ -14,20 +17,39 @@ public class Member {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idx;
 	
+	@Column(nullable = false)
 	private String id;
+	
+	@Column(nullable = false)
 	private String password;
+
+	@Column(nullable = false)
 	private String name;
+	
+	@Column(nullable = false)
 	private String email;
+	
+	@Column(name = "birth_date")
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date birthDate;
+	
+	@Column(name = "join_date")
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date joinDate;
+	
+	@Column(name = "update_date")
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date updateDate;
 	
+
 	public int getIdx() {
 		return idx;
 	}
 	public void setIdx(int idx) {
 		this.idx = idx;
 	}
+	
+
 	public String getId() {
 		return id;
 	}
