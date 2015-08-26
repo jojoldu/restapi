@@ -1,7 +1,7 @@
-# restapi
-스터디용 REST API
-
-#Member Query
+# Description
+ - 스터디용 REST API
+ - Springboot, JPA, Mysql, freemarker
+#Member Schema
 
 create table member(
 	idx int(11) not null auto_increment primary key,
@@ -13,3 +13,4 @@ create table member(
 	join_date datetime,
 	update_ddate datetime
 );
+
